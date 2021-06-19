@@ -2,18 +2,35 @@
  * @jest-environment jsdom
  */
 import React from 'react';
+import { unmountComponentAtNode } from "react-dom";
 import { render, screen } from '@testing-library/react';
+import { act } from "react-dom/test-utils";
 
 // Part 1
-import PassingProps from '../src/Part 1/1_passing_props.jsx';
+import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from '../src/1_PassingProperties.jsx';
+import { UpdatingState, UpdatingStateForForms } from '../src/2_UpdatingState.jsx';
 
 
-describe('Part 1', () => {
+describe('Passing properties', () => {
 
-  it('Correctly passes down a single value prop', () => {
-    render(<PassingProps name="Morty"/>)
-    expect(screen.queryByText(/morty/i)).toBeDefined();
-    expect(screen.queryByText(/ben/i)).toBeNull();
+  it('Functional component correctly passes down properties', () => {
+    render(<PassingSingleProp name="Morty" age="30"/>);
+    expect(screen.getByRole('article').innerHTML).toMatch(/My name is Morty and I am 30 years old./i);
   })
+
+  it('Functional component correctly passes down destructured properties', () => {
+    render(<PassingSinglePropDestructured name="Morty" age="30"/>);
+    expect(screen.getByRole('article').innerHTML).toMatch(/My name is Morty and I am 30 years old./i);
+  })
+
+  it('Class component correctly passes down properties', () => {
+    render(<PassingSinglePropClass name="Morty" age="30"/>);
+    expect(screen.getByRole('article').innerHTML).toMatch(/My name is Morty and I am 30 years old./i);
+  })
+
+});
+
+xdescribe('Storing and updating state', () => {
+
 
 });
