@@ -26,14 +26,18 @@ class UpdatingState extends React.Component {
     // console.log(this.state.counter)
     return (
       <>
-        <div>
+        <p>
           <label> Updating text
             <input type="input" onChange={this.handleOnChange}/>
           </label>
-        </div>
-        <div>Counter: {this.state.counter}</div>
-        <button type="button" onClick={() => this.handleDecrement()}> - </button>
-        <button type="button" onClick={this.handleIncrement}> + </button>
+        </p>
+
+        <p>
+          <button type="button" onClick={() => this.handleDecrement()}> - </button>
+          Counter: {this.state.counter}
+          <button type="button" onClick={this.handleIncrement}> + </button>
+        </p>
+
       </>
     )
   }

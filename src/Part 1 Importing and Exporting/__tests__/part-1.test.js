@@ -5,8 +5,8 @@
  import { render, screen } from '@testing-library/react';
 
  // Part 1
- import ShowPictureAndDesc from '../../src/Part 1 Importing and Exporting/ShowPictureAndDesc.jsx';
- import { applePieDesc, blackCoffeeDesc, utils } from '../../src/Part 1 Importing and Exporting/exportMe';
+ import ShowPictureAndDesc from '../ShowPictureAndDesc.jsx';
+ import { applePieDesc, blackCoffeeDesc, utils } from '../randomStuff';
 
  describe('Import and exporting', () => {
 

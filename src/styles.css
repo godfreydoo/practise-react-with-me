@@ -1,7 +1,21 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 img {
   width: 200px;
   height: 200px;
   padding-right: 25px;
+}
+
+form {
+  border: 1px solid black;
+  width: 50%;
+}
+
+form > div {
+  padding: 10px;
+  margin: 10px;
 }
 
 .imgContainer {

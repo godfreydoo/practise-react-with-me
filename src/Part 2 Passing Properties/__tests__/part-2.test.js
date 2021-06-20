@@ -4,8 +4,8 @@
  import React from 'react';
  import { render, screen } from '@testing-library/react';
 
- // Part 1
- import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from '../../src/Part 2 Passing Properties/PassingProperties.jsx';
+ // Part 2
+ import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from '../PassingProperties.jsx';
 
 
  xdescribe('Passing properties', () => {

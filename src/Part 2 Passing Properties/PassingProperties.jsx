@@ -35,7 +35,7 @@ Note:
   Link: https://reactjs.org/docs/components-and-props.html#props-are-read-only
 
 "Class components should always call the base constructor with props.
-  - class components can also pass down properties to other class components, which can be reference with "this.state...""
+  - class components can also pass down properties to other class components, which can be reference with "this.state.props...""
   Link: https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class
 
 */
