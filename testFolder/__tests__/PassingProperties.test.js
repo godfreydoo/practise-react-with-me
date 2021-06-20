@@ -2,15 +2,13 @@
  * @jest-environment jsdom
  */
  import React from 'react';
- import { unmountComponentAtNode } from "react-dom";
  import { render, screen } from '@testing-library/react';
- import { act } from "react-dom/test-utils";
 
  // Part 1
- import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from '../PassingProperties.jsx';
+ import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from '../../src/Part 2 Passing Properties/PassingProperties.jsx';
 
 
- describe('Passing properties', () => {
+ xdescribe('Passing properties', () => {
 
    it('Functional component correctly passes down properties', () => {
      render(<PassingSingleProp name="Morty" age="30"/>);
