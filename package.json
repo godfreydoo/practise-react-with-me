@@ -32,8 +32,15 @@
     "@testing-library/react": "^11.2.7",
     "babel-jest": "^27.0.2",
     "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
     "jest": "^27.0.4",
+    "style-loader": "^2.0.0",
     "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
   }
 }
