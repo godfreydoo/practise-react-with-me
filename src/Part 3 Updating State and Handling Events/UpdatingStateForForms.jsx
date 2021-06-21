@@ -19,18 +19,26 @@ class UpdatingStateForForms extends React.Component {
   }
 
   handleForm = (event) => {
-    this.setState({[event.target.name]: event.target.value});
+    let value = event.target.value;
+    let field = event.target.name;
+
+    if (field === 'age') {
+      value = Number(value);
+    }
+
+    this.setState({[field]: value});
   }
 
   submitForm = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    this.props.doSomethingWithFormData(this.state);
     this.setState(initialState);
   }
 
   render () {
+    // console.log(this.state)
     return (
-      <>
+      <div>
         <form onSubmit={this.submitForm}>
           <div>
             <label> Name:
@@ -40,7 +48,7 @@ class UpdatingStateForForms extends React.Component {
 
           <div>
             <label> Age:
-              <input type="input" name="age" value={this.state.age} onChange={this.handleForm}/>
+              <input type="number" name="age" min="0" max="150" value={this.state.age} onChange={this.handleForm}/>
             </label>
           </div>
 
@@ -48,10 +56,10 @@ class UpdatingStateForForms extends React.Component {
             <label> Favorite Movie Genre:
               <select name="movie" value={this.state.movie} onChange={this.handleForm}>
                 <option value="">None</option>
-                <option value="action">Action</option>
-                <option value="romance">Romance</option>
-                <option value="horror">Horror</option>
-                <option value="comedy">Comedy</option>
+                <option value="Action">Action</option>
+                <option value="Romance">Romance</option>
+                <option value="Horror">Horror</option>
+                <option value="Comedy">Comedy</option>
               </select>
             </label>
           </div>
@@ -59,31 +67,31 @@ class UpdatingStateForForms extends React.Component {
           <div>
           Favorite Programming Language:
             <div>
-              <input type="radio" name="language" value="javascript" onChange={this.handleForm}/>
-              <label>JavaScript</label>
+              <label>
+                <input type="radio" name="language" value="JavaScript" checked={this.state.language === 'JavaScript'} onChange={this.handleForm}/>
+                JavaScript
+              </label>
             </div>
             <div>
-              <input type="radio" name="language" value="python" onChange={this.handleForm}/>
-              <label>Python</label>
+              <label>
+                <input type="radio" name="language" value="Python" checked={this.state.language === 'Python'} onChange={this.handleForm}/>
+                Python
+              </label>
             </div>
             <div>
-              <input type="radio" name="language" value="go" onChange={this.handleForm}/>
-              <label>Go</label>
+              <label>
+                <input type="radio" name="language" value="Go" checked={this.state.language === 'Go'} onChange={this.handleForm}/>
+                Go
+              </label>
             </div>
           </div>
           <div>
             <button type="submit" > Submit Form </button>
           </div>
         </form>
-      </>
+      </div>
     )
   }
 }
 
 export default UpdatingStateForForms;
-
-/*
-Note:
-
-
-*/

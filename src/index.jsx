@@ -21,6 +21,10 @@ const App = (props) => {
     return Math.floor(Math.random() * 100);
   }
 
+  function doSomethingWithFormData(data) {
+    console.log('from the doSomethingWithFormData function', data);
+  }
+
   return (
     <div>
       <section>
@@ -38,7 +42,7 @@ const App = (props) => {
       <section>
         <h2> Updating State and Handling Events </h2>
         <UpdatingState />
-        <UpdatingStateForForms />
+        <UpdatingStateForForms doSomethingWithFormData={doSomethingWithFormData}/>
       </section>
 
     </div>

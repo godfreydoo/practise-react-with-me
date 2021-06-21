@@ -5,49 +5,47 @@ class UpdatingState extends React.Component {
     super(props);
     this.state = {
       text: '',
-      counter: 0
+      quantity: 0,
     }
   }
 
-  handleOnChange = (event) => {
+  handleText = (event) => {
     this.setState({text: event.target.value})
   }
 
+  handleQuantity = (event) => {
+    this.setState({quantity: Number(event.target.value)})
+  }
+
   handleDecrement() {
-    this.setState({counter: this.state.counter - 1})
+    if (this.state.quantity > 0) {
+      this.setState({quantity: this.state.quantity - 1})
+    }
   }
 
   handleIncrement = () => {
-    this.setState({counter: this.state.counter + 1})
+    this.setState({quantity: this.state.quantity + 1})
   }
 
   render () {
     // console.log(this.state.text)
-    // console.log(this.state.counter)
+    // console.log(this.state.quantity)
     return (
-      <>
-        <p>
-          <label> Updating text
-            <input type="input" onChange={this.handleOnChange}/>
+      <div>
+        <div>
+          <label>Updating text
+            <input type="input" onChange={this.handleText}/>
           </label>
-        </p>
-
-        <p>
-          <button type="button" onClick={() => this.handleDecrement()}> - </button>
-          Counter: {this.state.counter}
-          <button type="button" onClick={this.handleIncrement}> + </button>
-        </p>
-
-      </>
+        </div>
+        <br />
+        <label>Quantity:
+          <input type="number" min="0" value={this.state.quantity} onChange={this.handleQuantity}/>
+        </label>
+        <button aria-label="decrement counter" type="button" onClick={() => this.handleDecrement()}> - </button>
+        <button aria-label="increment counter" type="button" onClick={this.handleIncrement}> + </button>
+      </div>
     )
   }
 }
 
 export default UpdatingState;
-
-/*
-Note:
-
-
-*/
-
