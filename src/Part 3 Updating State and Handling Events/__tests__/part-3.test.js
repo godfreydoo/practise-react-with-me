@@ -11,6 +11,20 @@
 
  xdescribe('Updating state and handling events', () => {
 
+  it('UpdateState --> should update "counter" state upon clicking', () => {
 
+  });
+
+ });
+
+ xdescribe('Form handling of state and events', () => {
+
+  it('UpdateStateForForms --> should update states upon user interaction', () => {
+
+  });
+
+  it('UpdateStateForForms --> should submit form data', () => {
+
+  });
 
  });

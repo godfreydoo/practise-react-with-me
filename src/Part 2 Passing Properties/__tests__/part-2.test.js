@@ -23,10 +23,11 @@
    })
 
    it('Component invokes passed down function', () => {
-     const randomAge = jest.fn();
+     const returnNumber = jest.fn(() => Math.floor(Math.random() * 100));
 
-     render(<PassingPropWithFunction randomAge={randomAge}/>);
-     expect(randomAge).toBeCalled();
+     render(<PassingPropWithFunction randomAge={returnNumber}/>);
+     expect(returnNumber).toBeCalled();
+     expect(typeof returnNumber()).toBe('number');
    })
 
  });
