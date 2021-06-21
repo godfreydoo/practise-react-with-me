@@ -6,19 +6,23 @@ import './styles.css';
 import ShowPictureAndDesc from './Part 1 Importing and Exporting/ShowPictureAndDesc.jsx';
 
 // Part 2 Passing Properties
-import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from './Part 2 Passing Properties/PassingProperties.jsx';
+import PassingProp from './Part 2 Passing Properties/PassingProp.jsx';
+import PassingPropWithFunction from './Part 2 Passing Properties/PassingPropWithFunction.jsx';
+import PassingPropDestructured from './Part 2 Passing Properties/PassingPropDestructured.jsx';
 
 // Part 3 Updating State and Events
 import UpdatingState from './Part 3 Updating State and Handling Events/UpdatingState.jsx';
-import UpdatingStateForForms from './Part 3 Updating State and Handling Events/UpdatingStateForm.jsx';
+import UpdatingStateForForms from './Part 3 Updating State and Handling Events/UpdatingStateForForms.jsx';
 
 
 const App = (props) => {
 
+  function randomAge() {
+    return Math.floor(Math.random() * 100);
+  }
+
   return (
     <div>
-      <h1> Let's start </h1>
-
       <section>
         <h2> Importing and Exporting </h2>
         <ShowPictureAndDesc />
@@ -26,9 +30,9 @@ const App = (props) => {
 
       <section>
         <h2> Passing Properties </h2>
-        <PassingSingleProp name="Bob" age="30" />
-        <PassingSinglePropDestructured name="Billy" age="23"/>
-        <PassingSinglePropClass name="Jane" age="25"/>
+        <PassingProp name="Bob" age="30" />
+        <PassingPropDestructured name="Jane" age="25"/>
+        <PassingPropWithFunction randomAge={randomAge}/>
       </section>
 
       <section>

@@ -5,24 +5,28 @@
  import { render, screen } from '@testing-library/react';
 
  // Part 2
- import { PassingSingleProp, PassingSinglePropDestructured, PassingSinglePropClass } from '../PassingProperties.jsx';
+ import PassingProp from '../PassingProp.jsx';
+ import PassingPropDestructured from '../PassingPropDestructured.jsx';
+ import PassingPropWithFunction from '../PassingPropWithFunction.jsx';
 
 
- xdescribe('Passing properties', () => {
+ describe('Passing properties', () => {
 
-   it('Functional component correctly passes down properties', () => {
-     render(<PassingSingleProp name="Morty" age="30"/>);
+   it('Functional component correctly shows properties', () => {
+     render(<PassingProp name="Morty" age="30"/>);
      expect(screen.getByRole('article').innerHTML).toMatch(/My name is Morty and I am 30 years old./i);
    })
 
-   it('Functional component correctly passes down destructured properties', () => {
-     render(<PassingSinglePropDestructured name="Morty" age="30"/>);
+   it('Functional component correctly shows destructured properties', () => {
+     render(<PassingPropDestructured name="Morty" age="30"/>);
      expect(screen.getByRole('article').innerHTML).toMatch(/My name is Morty and I am 30 years old./i);
    })
 
-   it('Class component correctly passes down properties', () => {
-     render(<PassingSinglePropClass name="Morty" age="30"/>);
-     expect(screen.getByRole('article').innerHTML).toMatch(/My name is Morty and I am 30 years old./i);
+   it('Component invokes passed down function', () => {
+     const randomAge = jest.fn();
+
+     render(<PassingPropWithFunction randomAge={randomAge}/>);
+     expect(randomAge).toBeCalled();
    })
 
  });
