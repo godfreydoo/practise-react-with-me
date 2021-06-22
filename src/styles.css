@@ -1,23 +1,40 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
 }
 
 img {
   width: 200px;
   height: 200px;
-  padding-right: 25px;
+  margin-right: 25px;
 }
 
 form {
   border: 1px solid black;
-  width: 50%;
+  width: 100%;
+  margin-top: 25px;
 }
 
 section, form > div {
-  padding: 10px;
-  margin: 10px;
+  margin: 15px;
 }
 
 .imgContainer {
   display: flex;
+}
+
+.character {
+  display: flex;
+
+}
+
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  flex: 3 1 0%
 }

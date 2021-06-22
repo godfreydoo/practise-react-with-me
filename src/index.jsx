@@ -14,6 +14,9 @@ import PassingPropDestructured from './Part 2 Passing Properties/PassingPropDest
 import UpdatingState from './Part 3 Updating State and Handling Events/UpdatingState.jsx';
 import UpdatingStateForForms from './Part 3 Updating State and Handling Events/UpdatingStateForForms.jsx';
 
+// Part 4 Retrieving and Storing Data with an API
+import RetrievingAndStoringData from './Part 4 Interacting with an API/RetrievingAndStoringData.jsx';
+
 
 const App = (props) => {
 
@@ -46,8 +49,13 @@ const App = (props) => {
         <UpdatingStateForForms doSomethingWithFormData={doSomethingWithFormData}/>
       </section>
 
+      <section>
+        <h2> Interacting with an API </h2>
+        <RetrievingAndStoringData />
+      </section>
+
     </div>
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('app'));
