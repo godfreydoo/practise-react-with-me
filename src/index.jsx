@@ -30,7 +30,7 @@ const App = (props) => {
   }
 
   return (
-    <div>
+    <div className="container">
       <section>
         <h2> Importing and Exporting </h2>
         <ShowPictureAndDesc />
