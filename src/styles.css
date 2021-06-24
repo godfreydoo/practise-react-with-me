@@ -28,8 +28,26 @@ section, form > div {
   width: 600px;
 }
 
-.imgContainer, .character {
+.imgContainer, .todo {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.completed-status-icon {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.375rem;
+  margin-left: 0.375rem;
+  background: rgb(34, 139, 34);
+  border-radius: 50%;
+}
+
+.incomplete-status-icon {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.375rem;
+  margin-left: 0.375rem;
+  background: rgb(214, 61, 46);
+  border-radius: 50%;
 }

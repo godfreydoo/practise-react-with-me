@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 class RetrievingAndStoringData extends React.Component {
   constructor(props) {
@@ -25,9 +26,27 @@ class RetrievingAndStoringData extends React.Component {
       .catch(err => {
         console.error(err);
       })
+
+    // $.ajax({
+    //   method: 'GET',
+    //   url: `https://jsonplaceholder.typicode.com/todos/${randomNumber}`,
+    //   success: (data) => {
+    //     console.log(data);
+    //     this.setState({todo: data})
+    //   },
+    //   error: (err) => {
+    //     console.error(err);
+    //   }
+    // })
+      // .done(data => {
+      //   this.setState({todo: data})
+      // })
+      // .fail(err => {
+      //   console.error(err);
+      // })
   }
 
-  onClickShuffleData = () => {
+  onClickShuffleGetData = () => {
     const randomNumber = Math.floor(Math.random() * 200);
     this.getData(randomNumber);
   }
@@ -35,31 +54,17 @@ class RetrievingAndStoringData extends React.Component {
   render () {
     var iconStyle;
     if (this.state.todo.completed) {
-      iconStyle = {
-        height: '0.5rem',
-        width: '0.5rem',
-        marginRight: '0.375rem',
-        marginLeft: '0.375rem',
-        background: 'rgb(34, 139, 34)',
-        borderRadius: '50%'
-      }
+      iconStyle = 'completed-status-icon'
     } else {
-      iconStyle = {
-        height: '0.5rem',
-        width: '0.5rem',
-        marginRight: '0.375rem',
-        marginLeft: '0.375rem',
-        background: 'rgb(214, 61, 46)',
-        borderRadius: '50%'
-      }
+      iconStyle = 'incomplete-status-icon'
     }
     return (
       <div>
-        <button onClick={this.onClickShuffleData}>Shuffle</button>
-        <div className="character">
+        <button onClick={this.onClickShuffleGetData}>Shuffle</button>
+        <div className="todo">
           To-do:
-          <span style={iconStyle}></span>
-          <div>{this.state.todo.title}</div>
+          <span className={iconStyle}></span>
+          <article>{this.state.todo.title}</article>
         </div>
       </div>
     )
