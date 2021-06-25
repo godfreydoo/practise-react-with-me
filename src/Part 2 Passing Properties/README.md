@@ -20,4 +20,4 @@ React has this strict rule: **"All React components must act like pure functions
 * Class components can also pass down properties to other class components (being referenced with the `this` keyword)
 
 ## Links
-[Components and Props](https://reactjs.org/docs/components-and-props.html)
+- [Components and Props](https://reactjs.org/docs/components-and-props.html)
