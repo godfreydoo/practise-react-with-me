@@ -37,6 +37,7 @@ class UpdatingStateForForms extends React.Component {
   }
 
   render () {
+    // uncomment below and see what kind of properties are passed down
     // console.log(this.props)
     // console.log(this.state)
     return (

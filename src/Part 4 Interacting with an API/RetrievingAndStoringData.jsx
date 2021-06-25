@@ -27,6 +27,8 @@ class RetrievingAndStoringData extends React.Component {
   }
 
   render () {
+    // uncomment below and see what kind of properties are passed down
+    // console.log(this.props);
     var iconStyle;
     if (this.state.todo.completed) {
       iconStyle = 'completed-status-icon'
@@ -46,4 +48,4 @@ class RetrievingAndStoringData extends React.Component {
   }
 }
 
-export default RetrievingAndStoringData
+export default RetrievingAndStoringData;

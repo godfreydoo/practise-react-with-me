@@ -46,6 +46,26 @@ There are lots of events you can use outlined [here](https://reactjs.org/docs/ev
 
 Worth noting is the use of the `this` keyword in JSX callbacks. The below examples are taken from the [React documentaiton](https://reactjs.org/docs/handling-events.html).
 
+There are three options when ti comes to binding events and handlers:
+
+1. Class fields syntax with binding
+```javascript
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick.bind(this)}>
+        Click me
+      </button>
+    );
+  }
+}
+```
+
+2. Class fields syntax without binding
 ```javascript
 class LoggingButton extends React.Component {
   handleClick = () => {
@@ -62,10 +82,10 @@ class LoggingButton extends React.Component {
 }
 ```
 
-Compared to...
+3. Without class fields syntax / binding and an arrow function in the callback
 ```javascript
 class LoggingButton extends React.Component {
-  handleClick () {
+  handleClick() {
     console.log('this is:', this);
   }
 
@@ -78,6 +98,9 @@ class LoggingButton extends React.Component {
   }
 }
 ```
+
+React generally recommends using methods 1 or 2 to avoid potentially passing down the callback as a property to lower components and causing them to do extra re-rendering.
+
 
 ## Forms
 React has a whole section on [forms](https://reactjs.org/docs/forms.html).

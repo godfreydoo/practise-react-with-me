@@ -51,7 +51,7 @@ const App = (props) => {
 
       <section>
         <h2> Interacting with an API </h2>
-        <RetrievingAndStoringData />
+        <RetrievingAndStoringData hello="hello"/>
       </section>
 
     </div>
