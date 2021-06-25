@@ -94,9 +94,9 @@ React recommends using controlled components to implement forms where form data 
 
 
 ## Links
-[State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
-[Converting a Function to a Class](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
-[Adding Local State to a Class](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
-[Using State Correctly](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
-[Handling Events](https://reactjs.org/docs/handling-events.html)
-[Uncontrolled Components](https://reactjs.org/docs/uncontrolled-components.html)
+- [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
+- [Converting a Function to a Class](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
+- [Adding Local State to a Class](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
+- [Using State Correctly](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class)
+- [Handling Events](https://reactjs.org/docs/handling-events.html)
+- [Uncontrolled Components](https://reactjs.org/docs/uncontrolled-components.html)

@@ -114,6 +114,6 @@ class SayHello extends React.Component {
 
 
 ## Links
-[Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-[Export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
-[Object Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [Export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [Object Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

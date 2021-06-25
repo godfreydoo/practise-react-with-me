@@ -24,6 +24,4 @@ When access the data returned, be mindful of how to access the data and what dat
 
 
 ## Links
-[Lifecycle Methods](RetrievingAndStoringData.jsx)
-[JSON Placeholder](https://jsonplaceholder.typicode.com/)
-* good way to practice different HTTP methods just as GET, POST, PUT, and DELETE
+- [Lifecycle Methods](RetrievingAndStoringData.jsx)
