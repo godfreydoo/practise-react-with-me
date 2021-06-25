@@ -1,7 +1,7 @@
 # Updating State and Handling Events
 
 Tasks
-- [ ] Under `./__tests__/part-4.test.js`, remove the `x` from the test suite on ln 11
+- [ ] Under `./__tests__/part-4.test.js`, remove the `x` from the test suite on ln 11 if you are using the fetch method (test is WIP for other methods)
 - [ ] In RetrievingAndStoringData.jsx, complete the `componentDidMount()` method to call random data upon component render
 - [ ] In RetrievingAndStoringData.jsx, complete the `getData()` function to call random data
 - [ ] In RetrievingAndStoringData.jsx, complete the `onClickShuffleGetData()` event handler to get new data upon an onClick event
