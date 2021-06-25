@@ -10,7 +10,7 @@
  import UpdatingStateForForms from '../UpdatingStateForForms.jsx';
 
 
-describe('Updating state and handling events', () => {
+xdescribe('Updating state and handling events', () => {
 
   it('UpdateState --> should update "counter" state upon clicking', async () => {
     render(<UpdateState />);
@@ -29,7 +29,7 @@ describe('Updating state and handling events', () => {
 
  });
 
- describe('Form handling of state and events', () => {
+ xdescribe('Form handling of state and events', () => {
 
   it('UpdateStateForForms --> should update states upon user interaction', async () => {
     const doSomethingWithFormData = jest.fn();

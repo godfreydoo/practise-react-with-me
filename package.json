@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/godfreydoo/practise-react-with-me.git"
   },
-  "author": "Godfrey Doo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/godfreydoo/practise-react-with-me/issues"
@@ -20,7 +19,6 @@
     "concurrently": "^6.2.0",
     "express": "^4.17.1",
     "jquery": "^3.6.0",
-    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -36,7 +34,6 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
     "jest": "^27.0.4",
-    "jest-html-reporters": "^2.1.6",
     "style-loader": "^2.0.0",
     "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2"
@@ -44,10 +41,6 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "reporters": [
-      "default",
-      "jest-html-reporters"
-    ]
+    }
   }
 }

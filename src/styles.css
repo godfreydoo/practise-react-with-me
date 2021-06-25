@@ -28,7 +28,7 @@ section, form > div {
   width: 600px;
 }
 
-.imgContainer, .todo {
+.img-container, .todo {
   display: flex;
   align-items: center;
   flex-wrap: wrap;

@@ -1,4 +1,4 @@
 node_modules/
 dist/images/
 dist/bundle.js
-jest_html_reporters.html
+.copy.jsx

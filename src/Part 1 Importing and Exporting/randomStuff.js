@@ -4,13 +4,14 @@ const utils = {
   getDate () {
     return new Date().toString();
   },
-  getSomethingElse () {
+  getRandomText () {
     return 'As an example';
+  },
+  sayHello () {
+    return 'Hello word';
   }
 }
 
 module.exports = {
-  applePieDesc,
-  blackCoffeeDesc,
-  utils
+  // fill me in
 }

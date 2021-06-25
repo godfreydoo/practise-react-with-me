@@ -25,7 +25,7 @@ const App = (props) => {
   }
 
   function doSomethingWithFormData(data) {
-    // console.log(data);
+    console.log(data);
     return data;
   }
 

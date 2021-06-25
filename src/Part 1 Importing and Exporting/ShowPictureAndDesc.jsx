@@ -1,18 +1,18 @@
 import React from 'react';
 
-import applePieImg from '../assets/apple_pie.jpg';
-import blackCoffeeImg from '../assets/black_coffee.jpg';
-import { applePieDesc, blackCoffeeDesc, utils } from './randomStuff';
+// import the image for the apple pie here
+// import the image for the cup of black coffee here
+import {  } from './randomStuff';
 
 function ShowPictureAndDesc () {
   return (
     <>
-      <p id="date">{utils.getDate()}</p>
-      <p id="random">{utils.getSomethingElse()}</p>
+      <p id="date">{/* Fill me in with the getDate function */}</p>
+      <p id="random">{/* Fill me in with the randomText function */}</p>
 
-      <div className="imgContainer">
-        <img src={applePieImg} alt={applePieDesc}/>
-        <img src={blackCoffeeImg} alt={blackCoffeeDesc}/>
+      <div className="img-container">
+        <img src={''} alt={''}/>
+        <img src={''} alt={''}/>
       </div>
     </>
   )

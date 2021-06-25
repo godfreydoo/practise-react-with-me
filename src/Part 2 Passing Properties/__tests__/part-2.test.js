@@ -10,7 +10,7 @@
  import PassingPropWithFunction from '../PassingPropWithFunction.jsx';
 
 
- describe('Passing properties', () => {
+ xdescribe('Passing properties', () => {
 
    it('Functional component correctly shows properties', () => {
      render(<PassingProp name="Morty" age="30"/>);

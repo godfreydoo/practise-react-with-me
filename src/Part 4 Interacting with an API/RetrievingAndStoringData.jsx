@@ -10,45 +10,20 @@ class RetrievingAndStoringData extends React.Component {
   }
 
   componentDidMount() {
-    // console.log('Component mounted')
-    this.getData();
+    // console.log('Mounted')
+    // fill me in
   }
 
   getData = (randomNumber = 1) => {
-    fetch(`https://jsonplaceholder.typicode.com/todos/${randomNumber}`)
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        console.log(data);
-        this.setState({todo: data})
-      })
-      .catch(err => {
-        console.error(err);
-      })
-
-    // $.ajax({
-    //   method: 'GET',
-    //   url: `https://jsonplaceholder.typicode.com/todos/${randomNumber}`,
-    //   success: (data) => {
-    //     console.log(data);
-    //     this.setState({todo: data})
-    //   },
-    //   error: (err) => {
-    //     console.error(err);
-    //   }
-    // })
-      // .done(data => {
-      //   this.setState({todo: data})
-      // })
-      // .fail(err => {
-      //   console.error(err);
-      // })
+    // fill  me in
+    // for this example, you can call this url https://jsonplaceholder.typicode.com/todos/1
+    // once the data is received, set the 'todo' state to be the result of the call
+    // copy and paste into your browser and you will get an object
   }
 
   onClickShuffleGetData = () => {
     const randomNumber = Math.floor(Math.random() * 200);
-    this.getData(randomNumber);
+    // fill me in
   }
 
   render () {

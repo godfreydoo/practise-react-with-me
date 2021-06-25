@@ -10,21 +10,27 @@ class UpdatingState extends React.Component {
   }
 
   handleText = (event) => {
-    this.setState({text: event.target.value})
+    // fill me in
   }
 
   handleQuantity = (event) => {
-    this.setState({quantity: Number(event.target.value)})
+    // fill me in
   }
 
   handleDecrement() {
+    // console.log('this is:', this);
     if (this.state.quantity > 0) {
-      this.setState({quantity: this.state.quantity - 1})
+      // fill me in
     }
   }
 
   handleIncrement = () => {
-    this.setState({quantity: this.state.quantity + 1})
+    // console.log('this is:', this);
+    // fill me in
+  }
+
+  fillerFunctionDontUseMe = () => {
+    // replace me below with the above appropriate functions
   }
 
   render () {
@@ -34,15 +40,15 @@ class UpdatingState extends React.Component {
       <div>
         <div>
           <label>Updating text
-            <input type="input" onChange={this.handleText}/>
+            <input type="input" onChange={this.fillerFunctionDontUseMe}/>
           </label>
         </div>
         <br />
         <label>Quantity:
-          <input type="number" min="0" value={this.state.quantity} onChange={this.handleQuantity}/>
+          <input type="number" min="0" value={this.state.text} onChange={this.fillerFunctionDontUseMe}/>
         </label>
-        <button aria-label="decrement counter" type="button" onClick={() => this.handleDecrement()}> - </button>
-        <button aria-label="increment counter" type="button" onClick={this.handleIncrement}> + </button>
+        <button aria-label="decrement counter" type="button" onClick={this.fillerFunctionDontUseMe}> - </button>
+        <button aria-label="increment counter" type="button" onClick={this.fillerFunctionDontUseMe}> + </button>
       </div>
     )
   }

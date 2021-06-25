@@ -8,7 +8,7 @@ import userEvent from '@testing-library/user-event';
 import RetrievingAndStoringData from '../RetrievingAndStoringData.jsx';
 
 
-describe('Retrieving and storing data', () => {
+xdescribe('Retrieving and storing data', () => {
   it('Fetch method - User can see the "todo" section populate with text upon clicking Shuffle', async () => {
     const data = {
       completed: false,

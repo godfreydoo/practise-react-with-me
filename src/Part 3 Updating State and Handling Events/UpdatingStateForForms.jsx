@@ -26,16 +26,18 @@ class UpdatingStateForForms extends React.Component {
       value = Number(value);
     }
 
-    this.setState({[field]: value});
+    // fill me in and set state
   }
 
   submitForm = (event) => {
     event.preventDefault();
-    this.props.doSomethingWithFormData(this.state);
-    this.setState(initialState);
+    // use the function passed down to this component and invoke the function with the form details
+    // the function passed down just logs and returns data
+    this.setState(initialState); // after it's been submitted, I reset the state
   }
 
   render () {
+    // console.log(this.props)
     // console.log(this.state)
     return (
       <div>
